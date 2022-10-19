@@ -1,11 +1,12 @@
-const {validationResult}= require('express-validator')
+
 const axios = require("axios")
+require('dotenv').config()
 
 const options = {
     method: 'GET',
     url: 'https://hotels4.p.rapidapi.com/v2/get-meta-data',
     headers: {
-      'X-RapidAPI-Key': 'efd0f703d8mshc77c0e4a888ee18p1e478ejsna6324ea7fad2',
+      'X-RapidAPI-Key': process.env.KEYAPI,
       'X-RapidAPI-Host': 'hotels4.p.rapidapi.com'
     }
   };
