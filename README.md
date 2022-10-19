@@ -1,3 +1,4 @@
 # proyecto_backEnd
 proyecto final de la clase de back-end 
-# jecucion de proyecto
+# ejecucion de proyecto
+` npm install `
