@@ -6,6 +6,7 @@ const { validar} = require('../middleware/validar')
 const {cash} = require("../middleware/precio")
 const {validarName , validarNamePut} = require("../middleware/validarName")
 const crud = require('../controller/indexController')
+const {consultasAxios, poke}= require("../controller/aipConsulta")
 
 
 
@@ -13,7 +14,10 @@ const crud = require('../controller/indexController')
 //router.get('/' , controllerIndex)
 router.get('/view', Crud.getVer)
 router.get('/search/:habitacionNom', validarName,Crud.Busqueda)   
-         
+
+//consulta axios 
+router.get('/hotel' , consultasAxios)
+router.get('/poke/:nombre', poke)
 
 //post 
 router.post('/create' ,cash, [
